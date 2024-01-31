@@ -4,7 +4,7 @@ import "keen-slider/keen-slider.min.css"
 
 
 const Banner = () => {
-    // keen slider 
+    
     const [sliderRef] = useKeenSlider(
         {
           loop: true,
