@@ -14,12 +14,12 @@ const Details = () => {
   }, [id]);
 
   return (
-    <div className="bg-black bg-opacity-50 h-screen">
-      <div className="md:flex justify-center gap-6 mx-auto py-16">
+    <div className="bg-black bg-opacity-50 min-h-screen">
+      <div className="px-6 md:flex justify-center gap-6 mx-auto py-16">
         <div className="">
           <img className="shadow-xl" src={show?.image?.medium} alt="" />
         </div>
-        <div className="w-1/3">
+        <div className="md:w-1/3">
           <h3 className="text-xl md:text-3xl text-sky-300 mb-8">
             {show?.name}
           </h3>
