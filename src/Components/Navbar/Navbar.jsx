@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { RiMenuLine } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
+import { FaBookmark } from "react-icons/fa";
 
 
 const Navbar = () => {
@@ -93,6 +94,9 @@ const Navbar = () => {
                 <div className="hidden md:flex items-center gap-3">
                     {links}
                 </div>
+                <NavLink to={'/Book'}>
+                <FaBookmark className="text-2xl cursor-pointer" />
+                </NavLink>
             </div>
         </div>
 
