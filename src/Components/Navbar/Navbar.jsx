@@ -93,14 +93,6 @@ const Navbar = () => {
                 <div className="hidden md:flex items-center gap-3">
                     {links}
                 </div>
-
-                {/* Authentication routes */}
-                <div>
-                    <NavLink to={'/Login'}>
-                    <button className="btn btn-error btn-sm md:btn-md uppercase text-white md:text-xl
-                     border hover:border-white">Login</button>
-                    </NavLink>
-                </div>
             </div>
         </div>
 
