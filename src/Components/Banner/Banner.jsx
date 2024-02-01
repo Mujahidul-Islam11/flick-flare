@@ -42,7 +42,7 @@ const Banner = () => {
         )
 
     return (
-        <div>
+        <div className="relative w-full">
             <div className="">
             <div ref={sliderRef} className="keen-slider">
         <div className="keen-slider__slide number-slide1">

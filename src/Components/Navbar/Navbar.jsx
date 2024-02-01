@@ -1,6 +1,12 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { RiMenuLine } from "react-icons/ri";
+import { MdClose } from "react-icons/md";
+
 
 const Navbar = () => {
+    const [menu, setMenu] = useState(false);
+
     const links = (
         <>
       <NavLink
@@ -58,14 +64,30 @@ const Navbar = () => {
     )
 
     return (
-        <div className="bg-[#0C2D57] w-full">
-            <div className="flex justify-between items-center px-4 md:w-[1300px] py-2 md:0 mx-auto text-white">
+        <div>
+            <div className="bg-[#0C2D57] w-full">
+            <div className="flex justify-between items-center px-4 md:w-[1300px] py-2 md:p-0 mx-auto text-white">
                 {/* Logo */}
+                
+                <div className="flex items-center">
                 <div>
+                {menu ? (
+              <MdClose
+                onClick={() => setMenu(false)}
+                className="text-2xl md:hidden cursor-pointer"
+              />
+            ) : (
+              <RiMenuLine
+                onClick={() => setMenu(true)}
+                className="text-2xl md:hidden cursor-pointer"
+              />
+            )}
+                </div>
                     <img className="w-28 md:w-48" 
                     src="https://i.postimg.cc/v8LL12Cr/f-removebg-preview.png"
                      alt="" />
                 </div>
+                
 
                 {/* Navbar Routes */}
                 <div className="hidden md:flex items-center gap-3">
@@ -80,6 +102,19 @@ const Navbar = () => {
                     </NavLink>
                 </div>
             </div>
+        </div>
+
+        {/* responsive menu bar */}
+        <div>
+        {menu && (
+        <div className="flex justify-end md:hidden md:w-[1324px] absolute z-10">
+          <div className="bg-white rounded-lg shadow-xl w-[230px] space-y-4 px-4 py-4">
+            {links}
+          </div>
+        </div>
+      )}
+        </div>
+
         </div>
     );
 };
