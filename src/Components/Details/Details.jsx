@@ -3,6 +3,7 @@ import { FaRegBookmark } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 
 const Details = () => {
+  // details page submit here
   const { id } = useParams();
   const [show, setShow] = useState(null);
   const [openModal, setOpenModal] = useState(false);
